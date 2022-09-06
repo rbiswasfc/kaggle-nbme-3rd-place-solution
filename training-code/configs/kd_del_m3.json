@@ -1,0 +1,61 @@
+{
+    "debug": false,
+    
+    "num_layers_in_head": 12,
+    "mtl_tok_num_labels": 3,
+    "gradient_checkpointing": true,
+    "mixed_precision": true,
+    "n_freeze": 2,
+    "train_all": true,
+    
+    "batch_size": 8,
+    "swa_start": 2500,
+    "num_unlabelled": 250000,
+    
+    "base_model_path": "../dev-models/backbones/NBME_DEL_TAPT",
+
+    "checkpoint_dir": "../dev-models/tmp/del_kd1/trained_student",
+    "model_dir": "../dev-models/del",
+    "model_name": "A_DEL_KD_1",
+
+    "teacher_one_ckpt": "../dev-models/del/A_DEL_MPL_1.ckpt",
+    "teacher_two_ckpt": "../dev-models/del/A_DEL_MPL_2.ckpt",
+
+    "student_save_name": "student",
+    
+    "text_col": "pn_history",
+    "feature_col": "feature_text",
+    "label_col": "label_spans",
+    "annotation_col": "annotation",
+    "text_sequence_identifier": 1,
+    "max_length": 480,
+
+    "data_dir": "../data/train_data",
+    "train_path": "train_with_folds.csv",
+    "test_path": "test.csv",
+    "submission_path": "sample_submission.csv",
+    "features_path": "features.csv",
+    "notes_path": "patient_notes.csv",
+    "output_dir": "../outputs/kd",
+    "train_dataset_path": "train_dataset",
+    "valid_dataset_path": "valid_dataset",
+    
+    "weight_decay": 1e-3,
+    "lr": 5e-6,
+    "eps": 1e-6,
+    "beta1": 0.9,
+    "beta2": 0.99,
+
+    "num_epochs": 1,
+    "grad_accumulation": 1,
+    "warmup_pct": 0.02,
+    "dropout" : 0.1,
+    "num_layers_reinit" : 0,
+    "validation_interval": 1000,
+    "patience": 1000,
+
+    "only_pseudo": false,
+    "process_ckpt": true,
+    "train_folds": [0, 1, 2, 3, 4],
+    "valid_folds": [4]
+}

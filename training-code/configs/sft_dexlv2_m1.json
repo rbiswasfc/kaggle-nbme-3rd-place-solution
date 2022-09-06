@@ -1,0 +1,35 @@
+{
+    "debug": false,
+    
+    "num_layers_in_head": 12,
+    "mtl_tok_num_labels": 3,
+    "gradient_checkpointing": true,
+    "mixed_precision": true,
+    
+    "train_folds": [0, 1, 2, 3, 4],
+    "valid_folds": [4],
+    
+    "base_model_path": "../dev-models/backbones/NBME_DEXLV2_TAPT",
+    
+    "data_dir": "../data/train_data",
+    "train_path": "train_with_folds.csv",
+    "test_path": "test.csv",
+    "submission_path": "sample_submission.csv",
+    "features_path": "features.csv",
+    "notes_path": "patient_notes.csv",
+    
+    "output_dir": "./outputs",
+    "train_dataset_path": "train_dataset",
+    "valid_dataset_path": "valid_dataset",
+    
+    "text_col": "pn_history",
+    "feature_col": "feature_text",
+    "label_col": "label_spans",
+    "annotation_col": "annotation",
+    "text_sequence_identifier": 1,
+    "warmup_pct": 0.02,
+    
+    "model_dir": "../dev-models/dexlv2/",
+    "model_name": "A_DEXLV2_SFT_1"
+
+}

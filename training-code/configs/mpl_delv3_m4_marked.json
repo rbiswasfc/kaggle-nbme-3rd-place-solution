@@ -1,0 +1,54 @@
+{
+    "debug": false,
+    
+    "num_layers_in_head": 12,
+    "mtl_tok_num_labels": 3,
+    "gradient_checkpointing": true,
+    "mixed_precision": true,
+    "n_freeze": 0,
+    
+    "batch_size": 8,
+    "train_folds": [0, 1, 2, 3, 4],
+    "valid_folds": [4],
+    
+    "num_unlabelled": 180000,
+
+    "base_model_path": "../dev-models/backbones/NBME_DELV3_TAPT",
+    "student_model_dir": "../dev-models/tmp/delv3-mpl-4/trained_student",
+    "teacher_model_dir": "../dev-models/tmp/delv3-mpl-4/trained_teacher",
+    "teacher_save_name": "teacher", 
+    "student_save_name": "student",
+    
+    "data_dir": "../data/train_data",
+    "train_path": "train_with_folds.csv",
+    "test_path": "test.csv",
+    "submission_path": "sample_submission.csv",
+    "features_path": "features.csv",
+    "notes_path": "patient_notes.csv",
+    
+    "output_dir": "./outputs",
+    "train_dataset_path": "train_dataset",
+    "valid_dataset_path": "valid_dataset",
+    
+    "text_col": "pn_history",
+    "feature_col": "feature_text",
+    "label_col": "label_spans",
+    "annotation_col": "annotation",
+    "text_sequence_identifier": 1,
+    "max_length": 470,
+    
+    "weight_decay": 1e-3,
+    "lr": 2e-5,
+    "eps": 1e-6,
+    "beta1": 0.9,
+    "beta2": 0.99,
+    "num_epochs": 1,
+    "grad_accumulation": 1,
+    "warmup_pct": 0.02,
+    "validation_interval": 1000,
+
+    "model_name": "A_DELV3_MPL_4_MARKED",
+    "student_path": "../dev-models/tmp/delv3-mpl-4/trained_student/student_last.pth.tar",
+    "process_ckpt": true
+
+}

@@ -1,0 +1,24 @@
+
+{
+    "base_model_path": "../prod-models/backbones/NBME_DEL_TAPT",
+    "checkpoint_path": "../prod-models/del/A_DEL_KD_1.pth.tar",
+    "num_layers_in_head": 12,
+    "infer_batch_size": 32,
+    "threshold": 0.5,
+    "dataset_path": "../outputs/deberta_nbme_dataset",
+    "use_deberta_v3_tokenizer": false,
+
+    "gradient_checkpointing": false,
+    "dropout": 0.1,
+    "num_layers_reinit": 0,
+    "max_length": 512,
+    "text_sequence_identifier": 1,
+    "backbone_arch": "na",
+    "text_col": "pn_history",
+    "feature_col": "feature_text",
+    "label_col": "label_spans",
+    "annotation_col": "annotation",
+    "mtl_tok_num_labels": 3,
+    "scorer": "na"
+}
+

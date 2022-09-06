@@ -1,0 +1,9 @@
+{
+    "DATA_DIR": "../data/", 
+    "TRAIN_DATA_DIR": "../data/train_data/", 
+    "TEST_DATA_DIR": "../data/inference_data/", 
+    "MODEL_CHECKPOINT_DIR": "../prod-models/", 
+    "LOGS_DIR": "../logs/", 
+    "SUBMISSION_DIR": "../submissions/",
+    "OUTPUT_DIR": "../outputs/"
+}

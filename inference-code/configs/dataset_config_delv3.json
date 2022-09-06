@@ -1,0 +1,9 @@
+{
+    "base_model_path": "../prod-models/backbones/NBME_DELV3_TAPT",
+    "use_deberta_v3_tokenizer": true,
+    "text_sequence_identifier": 1,
+    "text_col": "pn_history",
+    "feature_col": "feature_text",
+    "max_length": 512,
+    "dataset_save_path": "../outputs/deberta_v3_nbme_dataset"
+}
